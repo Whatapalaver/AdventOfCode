@@ -1,0 +1,22 @@
+{
+  "name": "adventcalendar",
+  "version": "1.0.0",
+  "description": "Advent of Code =====",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Whatapalaver/AdventOfCode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Whatapalaver/AdventOfCode/issues"
+  },
+  "homepage": "https://github.com/Whatapalaver/AdventOfCode#readme",
+  "devDependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
