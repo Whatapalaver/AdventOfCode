@@ -31,7 +31,7 @@ function prepareRecords(){
       records[guardId].push([minuteAsleep, minuteAwake, minutesAsleep])
     }
   })
-console.log(records)
+// console.log(records)
 return records;
   
 }
@@ -39,9 +39,16 @@ prepareRecords()
 
 function sleepiestGuard() {
   let records = prepareRecords();
-
+  Object.keys(records).forEach(guard => {
+    console.log(records[guard])
+    // now use reduce to get sum of asleep minutes
+  })
+  let test = records['101'][0][2]
+  // console.log(test)
+  // console.log(Object.keys(records)) 
 }
 
+sleepiestGuard()
 
 // Helpers
 
