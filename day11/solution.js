@@ -48,4 +48,40 @@ function threeSquareTotal(serialNumber = 4172) {
   return maxPowerCell
 }
 
-threeSquareTotal()
+// Part 2
+
+function variableSquareTotal(cellSize = 3, serialNumber = 4172) {
+  const grid = powerGrid(serialNumber)
+  let maxPowerCell = ['x,y', 0] //assuming max power will exceed 0
+  for (let x = 1; x < 302 - cellSize; x++) {
+    for (let y = 1; y < 302 - cellSize; y++) {
+      let totalPower = 0
+      for (let xi = 0; xi < cellSize; xi++) {
+        for (let yi = 0; yi < cellSize; yi++) {
+          totalPower += grid[x + xi][y + yi]
+        }
+      }
+      if (totalPower > maxPowerCell[1]) {
+        maxPowerCell = [`${x}, ${y}`, totalPower];
+      }
+    }
+  }
+  // console.log(maxPowerCell)
+  return maxPowerCell
+}
+
+function maxVariableSquare(serialNumber = 4172) {
+  let maxPower = [1, ['x, y', 0 ]] // size and power
+  let variableTotal = 0
+  for (cellSize = 1; cellSize < 301; cellSize++) {
+    variableTotal = variableSquareTotal(cellSize, serialNumber)
+    if (variableTotal[1] > maxPower[1][1]) { 
+      maxPower = [cellSize, variableTotal]
+      console.log(maxPower)
+    }
+  }
+  console.log('Final: ', maxPower)
+  return maxPower
+}
+
+maxVariableSquare()
