@@ -29,9 +29,28 @@ function returnResidue(array) {
   return residue
 }
 
+// Part 1 Helpers
+
 function oppositesImplode(char1, char2) {
   return char1.toLowerCase() === char2.toLowerCase() && char1 !== char2
 }
 
-// console.log(oppositesImplode('a','A'))
-// console.log(oppositesImplode('a','a'))
+// Part 2
+
+function shortestPolymer() {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+  let lengths = []
+  alphabet.forEach((letter) => {
+    let regex = new RegExp(letter, "ig")
+    let tempArray = polymerString.replace(regex, '').split('')
+    lengths.push(returnResidueSize(tempArray))
+  })
+  console.log(Math.min(...lengths))
+  return Math.min(...lengths)
+}
+
+shortestPolymer()
+
+// Part 2 Helpers
+
+
