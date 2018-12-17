@@ -1,4 +1,4 @@
---- Day 2: Repose Record ---
+--- Day 4: Repose Record ---
 -----
 
 ## Part One
