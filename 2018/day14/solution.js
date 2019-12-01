@@ -65,8 +65,8 @@ console.log(scoreNextTen(18) === '9251071085')  // '9251071085'
 console.log(scoreNextTen(2018) === '5941429882') // '5941429882'
 console.log(scoreNextTen(894501)) //2157138126
 
-console.log(getNumberOfRecipesBefore('51589') === 9) // '5158916779'
-console.log(getNumberOfRecipesBefore('01245') === 5)  // '0124515891'
-console.log(getNumberOfRecipesBefore('92510') === 18)  // '9251071085'
-console.log(getNumberOfRecipesBefore('59414') === 2018) // '5941429882'
+console.log(getNumberOfRecipesBefore('51589') === 9) 
+console.log(getNumberOfRecipesBefore('01245') === 5) 
+console.log(getNumberOfRecipesBefore('92510') === 18)
+console.log(getNumberOfRecipesBefore('59414') === 2018)
 console.log(getNumberOfRecipesBefore('894501')) //20365082
